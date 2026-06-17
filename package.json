@@ -1,9 +1,12 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "dashboard"
+  ],
   "scripts": {
     "dev": "npm run dev --prefix dashboard",
-    "build": "npm run build --prefix dashboard",
+    "build": "npm install --prefix dashboard && npm run build --prefix dashboard",
     "preview": "npm run preview --prefix dashboard"
   }
 }
