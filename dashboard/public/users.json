@@ -1,0 +1,67 @@
+[
+  {
+    "id": "E001",
+    "name": "John Doe",
+    "role": "Senior Developer",
+    "department": "Engineering",
+    "email": "john.doe@company.com",
+    "baseSalary": "$8,500/mo",
+    "phone": "+1 (555) 019-2834",
+    "profileColor": "#6366f1",
+    "status": "Active",
+    "joinDate": "2023-03-15",
+    "rating": "4.8"
+  },
+  {
+    "id": "E002",
+    "name": "Sarah Jenkins",
+    "role": "Lead Designer",
+    "department": "Design",
+    "email": "sarah.jenkins@company.com",
+    "baseSalary": "$8,200/mo",
+    "phone": "+1 (555) 024-9182",
+    "profileColor": "#ec4899",
+    "status": "Active",
+    "joinDate": "2023-09-01",
+    "rating": "4.9"
+  },
+  {
+    "id": "E003",
+    "name": "Marcus Chen",
+    "role": "Marketing Manager",
+    "department": "Marketing",
+    "email": "marcus.chen@company.com",
+    "baseSalary": "$7,000/mo",
+    "phone": "+1 (555) 038-7241",
+    "profileColor": "#10b981",
+    "status": "Active",
+    "joinDate": "2024-01-10",
+    "rating": "4.5"
+  },
+  {
+    "id": "E004",
+    "name": "Emily Watson",
+    "role": "HR Director",
+    "department": "HR",
+    "email": "emily.watson@company.com",
+    "baseSalary": "$7,800/mo",
+    "phone": "+1 (555) 041-8930",
+    "profileColor": "#f59e0b",
+    "status": "Active",
+    "joinDate": "2022-11-15",
+    "rating": "4.7"
+  },
+  {
+    "id": "E005",
+    "name": "Alexander Knight",
+    "role": "Product Lead",
+    "department": "Product",
+    "email": "alex.knight@company.com",
+    "baseSalary": "$9,100/mo",
+    "phone": "+1 (555) 062-1109",
+    "profileColor": "#3b82f6",
+    "status": "Active",
+    "joinDate": "2021-06-20",
+    "rating": "4.6"
+  }
+]
