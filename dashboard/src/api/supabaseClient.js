@@ -17,8 +17,8 @@ export const hasSupabaseKeys = () => {
   return !!(
     supabaseUrl &&
     supabaseAnonKey &&
-    supabaseUrl !== 'your_supabase_project_url' &&
-    supabaseAnonKey !== 'your_supabase_anon_key' &&
+    supabaseUrl !== 'https://bsfeetmcymmijhgwnyzq.supabase.co' &&
+    supabaseAnonKey !== 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJzZmVldG1jeW1taWpoZ3dueXpxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE1NzUwMTYsImV4cCI6MjA5NzE1MTAxNn0.ztxR_BAWgfZkNJIgKWmTa5zAxjLXt8hT8gcfzj1Wdsc' &&
     supabaseUrl.trim() !== '' &&
     supabaseAnonKey.trim() !== ''
   );

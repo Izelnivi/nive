@@ -72,6 +72,21 @@ export const adminApi = {
         console.error('Supabase addEmployee error:', error);
         throw new Error(error.message);
       }
+
+      // Create login credentials for the added employee
+      if (employeeData.password) {
+        const { error: credError } = await supabase
+          .from('credentials')
+          .insert([{ email: employeeData.email.toLowerCase(), password: employeeData.password }]);
+        
+        if (credError) {
+          console.error('Supabase addEmployee credentials error:', credError);
+          // Rollback the employee insertion
+          await supabase.from('employees').delete().eq('id', nextId);
+          throw new Error(`Employee registered, but failed to create credentials: ${credError.message}`);
+        }
+      }
+
       return data;
     }
 
@@ -108,6 +123,15 @@ export const adminApi = {
 
     db.employees.push(newEmployee);
     saveDB(db);
+
+    // Save credentials locally
+    if (employeeData.password) {
+      const CREDENTIALS_KEY = 'local_credentials';
+      const localCreds = JSON.parse(localStorage.getItem(CREDENTIALS_KEY) || '{}');
+      localCreds[employeeData.email.toLowerCase()] = employeeData.password;
+      localStorage.setItem(CREDENTIALS_KEY, JSON.stringify(localCreds));
+    }
+
     return newEmployee;
   },
 
